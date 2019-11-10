@@ -1,4 +1,4 @@
-# 关于
-文档编写：vfleaking
+# About
+Docs：authored by vfleaking, translated by aaronliu0130.
 
-邮件：vfleaking@163.com
+Email：vfleaking@163.com, aaronliu0130@outlook.com

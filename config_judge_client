@@ -10,9 +10,9 @@ def translate(filename, target, tab):
 	with open(target, 'w') as f:
 		f.write(content)
 
-cid = raw_input('uoj container id: ')
-ip = raw_input('uoj ip: ')
-name = raw_input('judger name: ')
+ip = raw_input('Judge IP: ')
+cid = raw_input('Judge Container ID: ')
+name = raw_input('Judge Name: ')
 
 os.system("docker cp " + cid + ":/home/local_main_judger/judge_client/.conf.json docker/judge_client/conf.json")
 
@@ -34,5 +34,5 @@ translate_table = {
 
 translate('docker/judge_client/install', 'docker/judge_client/cur_install', translate_table)
 
-print "please modify the database after getting the judger server ready:"
+print "Please modify the problem database after the judge server is ready:"
 print "insert into judger_info (judger_name, password, ip) values ('%s', '%s', '__judger_ip_here__');" % (name, conf['judger_password'])
